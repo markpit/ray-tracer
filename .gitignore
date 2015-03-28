@@ -26,3 +26,17 @@
 *.exe
 *.out
 *.app
+
+#images
+*.tga
+
+#Code::Blocks project file
+*.cbp
+*.layout
+
+#Temporary files
+*~
+
+/bin
+/obj
+

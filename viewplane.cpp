@@ -14,16 +14,16 @@
 //
 
 Viewplane::Viewplane(double xref, double yref, double zref, int img_x, int img_y)
-:view_x(10.24), view_y(7.68)
+    :view_x(10.24), view_y(7.68)
 {
-	bot_left = new Point3d(xref, yref, zref);
-	image_x = img_x;
-	image_y = img_y;
-	pixel_x = view_x / image_x;
-	pixel_y = view_y / image_y;
+    bot_left = new Point3d(xref, yref, zref);
+    image_x = img_x;
+    image_y = img_y;
+    pixel_x = view_x / image_x;
+    pixel_y = view_y / image_y;
 
-	image = new TGAimage("output.tga");
-	image->createNew(image_x, image_y);
+    image = new TGAimage("output.tga");
+    image->createNew(image_x, image_y);
 
 }
 
@@ -35,9 +35,9 @@ Viewplane::Viewplane(double xref, double yref, double zref, int img_x, int img_y
 
 Viewplane::~Viewplane()
 {
-	delete bot_left;
-	image->writeImage();	// save results to file
-	delete image;
+    delete bot_left;
+    image->writeImage();	// save results to file
+    delete image;
 }
 
 
@@ -48,7 +48,7 @@ Viewplane::~Viewplane()
 
 double Viewplane::getPixelxSize()
 {
-	return pixel_x;
+    return pixel_x;
 }
 
 
@@ -56,10 +56,10 @@ double Viewplane::getPixelxSize()
 //
 // getPixelySize - returns pixel y size
 //
-		
+
 double Viewplane::getPixelySize()
 {
-	return pixel_y;
+    return pixel_y;
 }
 
 
@@ -70,7 +70,7 @@ double Viewplane::getPixelySize()
 
 double Viewplane::getxSize()
 {
-	return view_x;
+    return view_x;
 }
 
 
@@ -81,7 +81,7 @@ double Viewplane::getxSize()
 
 double Viewplane::getySize()
 {
-	return view_y;
+    return view_y;
 }
 
 
@@ -92,7 +92,7 @@ double Viewplane::getySize()
 
 int Viewplane::getImagexSize()
 {
-	return image_x;
+    return image_x;
 }
 
 
@@ -103,7 +103,7 @@ int Viewplane::getImagexSize()
 
 int Viewplane::getImageySize()
 {
-	return image_y;
+    return image_y;
 }
 
 
@@ -114,7 +114,7 @@ int Viewplane::getImageySize()
 
 double Viewplane::getBottomLeftx()
 {
-	return bot_left->x;
+    return bot_left->x;
 }
 
 
@@ -125,7 +125,7 @@ double Viewplane::getBottomLeftx()
 
 double Viewplane::getBottomLefty()
 {
-	return bot_left->y;
+    return bot_left->y;
 }
 
 
@@ -136,7 +136,7 @@ double Viewplane::getBottomLefty()
 
 double Viewplane::getBottomLeftz()
 {
-	return bot_left->z;
+    return bot_left->z;
 }
 
 
@@ -147,11 +147,11 @@ double Viewplane::getBottomLeftz()
 
 void Viewplane::setImageSize(int xsize, int ysize)
 {
-	delete image;		// delete current image object
-	image_x = xsize;
-	image_y = ysize;
-	image = new TGAimage("output.tga");
-	image->createNew(image_x, image_y);
+    delete image;		// delete current image object
+    image_x = xsize;
+    image_y = ysize;
+    image = new TGAimage("output.tga");
+    image->createNew(image_x, image_y);
 }
 
 
@@ -162,8 +162,8 @@ void Viewplane::setImageSize(int xsize, int ysize)
 
 void Viewplane::setBottomLeft(double x, double y, double z)
 {
-		delete bot_left;
-		bot_left = new Point3d(x, y, z);
+    delete bot_left;
+    bot_left = new Point3d(x, y, z);
 }
 
 
@@ -174,8 +174,8 @@ void Viewplane::setBottomLeft(double x, double y, double z)
 
 void Viewplane::colourPixel(int red, int green, int blue, int x, int y)
 {
-	// to do - check image exists first
-	image->setPixel(red, green, blue, x, y);
+    // to do - check image exists first
+    image->setPixel(red, green, blue, x, y);
 }
 
 

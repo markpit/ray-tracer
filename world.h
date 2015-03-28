@@ -23,57 +23,56 @@
 
 using namespace std;
 
-class World
-{
-	private:
-		vector<ThreeDimensionalShape*> vecShapes;	//vector used to store our 3D objects
-		Point3d* camera;				//the position of the camera (or eye)
-		Viewplane* viewplane;					//the viewplane (or canvas) which is the window on our world.
-		Light* light;			//our light in the world (only one light - sort of sun)
-		
-
-	public:
-
-		World();
-			//
-			// Constructor 
-			///////////////////////////////////////////////////////////////////////////
+class World {
+private:
+    vector<ThreeDimensionalShape*> vecShapes;	//vector used to store our 3D objects
+    Point3d* camera;				//the position of the camera (or eye)
+    Viewplane* viewplane;					//the viewplane (or canvas) which is the window on our world.
+    Light* light;			//our light in the world (only one light - sort of sun)
 
 
-		~World();
-			//
-			// Deconstructor 
-			///////////////////////////////////////////////////////////////////////////
+public:
+
+    World();
+    //
+    // Constructor
+    ///////////////////////////////////////////////////////////////////////////
 
 
-		void addShape(ThreeDimensionalShape* theShape);
-			//
-			// addShape - adds a ThreeDimensionalShape to the world
-			///////////////////////////////////////////////////////////////////////////
+    ~World();
+    //
+    // Deconstructor
+    ///////////////////////////////////////////////////////////////////////////
 
 
-		void addCamera(Point3d* cam);
-			//
-			// addCamera - adds a camera - the viewpoint
-			///////////////////////////////////////////////////////////////////////////
-
-		
-		void addLight(Light* l);
-			//
-			// addLight - the single light source for the world
-			///////////////////////////////////////////////////////////////////////////
+    void addShape(ThreeDimensionalShape* theShape);
+    //
+    // addShape - adds a ThreeDimensionalShape to the world
+    ///////////////////////////////////////////////////////////////////////////
 
 
-		void addViewplane(Viewplane* vp);
-			//
-			// addViewplane - the window on the world that we look through - has image stretched across it
-			///////////////////////////////////////////////////////////////////////////
+    void addCamera(Point3d* cam);
+    //
+    // addCamera - adds a camera - the viewpoint
+    ///////////////////////////////////////////////////////////////////////////
 
 
-		void render();
-			//
-			// render - renders the image
-			///////////////////////////////////////////////////////////////////////////
+    void addLight(Light* l);
+    //
+    // addLight - the single light source for the world
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    void addViewplane(Viewplane* vp);
+    //
+    // addViewplane - the window on the world that we look through - has image stretched across it
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    void render();
+    //
+    // render - renders the image
+    ///////////////////////////////////////////////////////////////////////////
 
 
 

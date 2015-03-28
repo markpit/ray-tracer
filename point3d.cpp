@@ -1,7 +1,7 @@
 //////////////////////////////////
 //								//
 //	Point3d member functions	//
-//	------------------------	//	
+//	------------------------	//
 //////////////////////////////////
 
 
@@ -15,7 +15,7 @@
 
 Point3d::Point3d()
 {
-	x = y = z = 0;
+    x = y = z = 0;
 }
 
 
@@ -27,9 +27,9 @@ Point3d::Point3d()
 
 Point3d::Point3d(double xpos, double ypos, double zpos)
 {
-	x = xpos;
-	y = ypos;
-	z = zpos;
+    x = xpos;
+    y = ypos;
+    z = zpos;
 }
 
-		
+
