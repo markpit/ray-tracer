@@ -183,7 +183,7 @@ void TGAimage::blurImage()
 //	char* pix = (char*)calloc((xsize*ysize*3), sizeof(char));
 //	char* greenpix = (char*)calloc((xsize*ysize), sizeof(char));
 //	char* bluepix = (char*)calloc((xsize*ysize), sizeof(char));
-    unsigned long filepos = image_data_offset;		// position of pointer in file
+//    unsigned long filepos = image_data_offset;		// position of pointer in file
 
 
     blur_pic->createNew(xsize, ysize);

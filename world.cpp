@@ -27,7 +27,7 @@ World::World()
 World::~World()
 {
     //delete shapes from vector
-    for (int i=0; i < vecShapes.size(); i++) {
+    for (unsigned int i=0; i < vecShapes.size(); i++) {
         delete vecShapes.at(i);
     }
     //delete vecShapes;
@@ -122,7 +122,7 @@ void World::render()
             double t = 0;
             ThreeDimensionalShape* shape_hit = NULL;
 
-            for (int i = 0; i < vecShapes.size(); i++) {
+            for (unsigned int i = 0; i < vecShapes.size(); i++) {
                 //if (s1->intersects(r, camera))
                 if (vecShapes.at(i)->intersects(r, camera)) {
                     if ((t == 0) || (r->t < t)) {
@@ -156,7 +156,7 @@ void World::render()
                 bool in_shadow = false;
                 // check to see if point of intersection is in shadow
 
-                for (int i = 0; i < vecShapes.size(); i++) {
+                for (unsigned int i = 0; i < vecShapes.size(); i++) {
 
                     if (!in_shadow && (vecShapes.at(i) != shape_hit))
                         //change intersects to getIntersect?

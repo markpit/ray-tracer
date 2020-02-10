@@ -5,6 +5,7 @@
 //////////////////////////////////////////////////////////////
 
 #include "sphere.h"
+#include "threedimensionalshape.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -90,10 +91,6 @@ bool Sphere::intersects(Ray* r, Point3d* cam)
 
 void Sphere::calcNormal(Ray* norm, Point3d* inters)
 {
-
-    double deltax, deltay, deltaz; // x,y,z of normal vector
-    double vect_length;		// length of vector
-
     // normal is the unit vector from centre of sphere to point of intersection
     // unit vector between 2 points p0 and p1 is
     // (x1-x0, y1-y0, z1-z0)  -- same as a ray is calculated (deltax, deltay, deltaz)

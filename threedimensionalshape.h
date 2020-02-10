@@ -30,6 +30,8 @@ public:
     virtual bool intersects(Ray* r, Point3d* cam) = 0;
 
     virtual void calcNormal(Ray* norm, Point3d* inters) = 0;
+
+    virtual ~ThreeDimensionalShape();
 };
 
 
