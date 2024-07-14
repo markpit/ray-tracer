@@ -10,6 +10,7 @@
 
 #include "world.h"
 
+using namespace std;
 
 const int image_x = 1024;
 const int image_y = 768;
