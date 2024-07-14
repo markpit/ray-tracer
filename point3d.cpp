@@ -13,8 +13,7 @@
 // Constructor
 //
 
-Point3d::Point3d()
-{
+Point3d::Point3d() {
     x = y = z = 0;
 }
 
@@ -25,8 +24,7 @@ Point3d::Point3d()
 // Constructor with 3 params, sets point to xpos, ypos, zpos
 //
 
-Point3d::Point3d(double xpos, double ypos, double zpos)
-{
+Point3d::Point3d(double xpos, double ypos, double zpos) {
     x = xpos;
     y = ypos;
     z = zpos;
