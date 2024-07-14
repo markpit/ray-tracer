@@ -48,13 +48,16 @@ int main()
     cout << "starting ...." << endl;
 
     World* myWorld = new World();
-    //set up camera
+    
+	//set up camera
     Point3d* camera = new Point3d(5, 4, -10);
     myWorld->addCamera(camera);
-    //set up light
+    
+	//set up light
     Light* l = new Light(8, 10, -3, 255, 255, 255, 1);
     myWorld->addLight(l);
-    //set up viewplane
+    
+	//set up viewplane
     Viewplane* vp = new Viewplane(0, 0, 0, image_x, image_y);
     myWorld->addViewplane(vp);
 
@@ -96,8 +99,7 @@ int main()
 
     for (int z=0; z<15; z++) {
         for (int x=0; x<10; x++) {
-
-            Sphere* s = new Sphere(x*2, 1, z*2, 1, 1, 85);	// a sphere object
+            Sphere* s = new Sphere(x*2, 1, z*2, 1, 1, 85);
             s->red = 255;
             s->blue = 0;
             s->green = 40;
